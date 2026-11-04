@@ -81,7 +81,7 @@ bool IntegratedDriveElectronicsController::identify_device(uint16_t command_base
 		buffer[i] = data_port.read();
 
 	// Get Name of the disk
-	string name = " "s * 40;
+	string name = " "_s* 40;
 	for (int i = 0; i < 20; i++) {
 		name[i * 2]     = (buffer[27 + i] >> 8) & 0xFF;
 		name[i * 2 + 1] = buffer[27 + i] & 0xFF;
